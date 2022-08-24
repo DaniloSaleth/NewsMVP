@@ -6,18 +6,18 @@ import com.example.praticamvp.presenter.ViewHome
 
 class SearchPresenter (val view : ViewHome.View, private val dataSource: NewsDataSource) : SearchHome.Presenter{
     override fun search(term: String) {
-        TODO("Not yet implemented")
+        dataSource.searchNews(term, this)
     }
 
     override fun onSuccess(newsResponse: NewsResponse) {
-        TODO("Not yet implemented")
+        view.showArticles(newsResponse.articles)
     }
 
     override fun onError(message: String) {
-        TODO("Not yet implemented")
+        view.showFailure(message)
     }
 
     override fun onComplete() {
-        TODO("Not yet implemented")
+        view.hideProgressBar()
     }
 }

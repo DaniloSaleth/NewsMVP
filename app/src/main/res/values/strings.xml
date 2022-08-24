@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PraticaMVP</string>
+    <string name="search_menu">Pesquisar...</string>
+    <string name="favorites">Favoritos</string>
 </resources>
